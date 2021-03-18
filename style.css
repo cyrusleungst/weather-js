@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+  color: white;
+}
+
+#main-container {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+form {
+  height: 100%;
+}
+
+.form-group {
+  float: right;
+  height: 80%;
+  position: relative;
+  margin: 2.5rem 3.5rem 0 0;
+}
+
+.submit-btn {
+  position: absolute;
+  top: 27%;
+  left: 6%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.fa-search {
+  color: #f3f3f3;
+  font-size: 1.4rem;
+}
+
+input[type="text"] {
+  width: 24rem;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0 0 0.3rem 4rem;
+  color: #ffffff;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+}
+
+input[type="text"]::placeholder {
+  color: #f3f3f3;
+}
+
+.location,
+.temperature {
+  height: 30vh;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.temperature {
+  flex-direction: column;
+}
+
+.temperature-description {
+  font-size: 28px;
+}
+
+.degree-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.degree-section span {
+  margin: 10px;
+  font-size: 30px;
+}
+
+.degree-section h2 {
+  font-size: 7rem;
+  font-weight: 900;
+  font-family: "Nunito", sans-serif;
+  position: relative;
+}
