@@ -91,7 +91,7 @@ const getWeather = async function () {
     const proxy = "https://cors-anywhere.herokuapp.com/";
 
     const weatherData = await fetch(
-      `${proxy}http://api.openweathermap.org/data/2.5/find?lat=${lat}&lon=${lng}&cnt=1&units=metric&appid=9b084a8b56d739bf7b9886f131a85ba3`
+      `http://api.openweathermap.org/data/2.5/find?lat=${lat}&lon=${lng}&cnt=1&units=metric&appid=9b084a8b56d739bf7b9886f131a85ba3`
     );
 
     const data = await weatherData.json();
@@ -111,7 +111,7 @@ const searchWeather = async function () {
     const proxy = "https://cors-anywhere.herokuapp.com/";
 
     const weatherData = await fetch(
-      `${proxy}http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=9b084a8b56d739bf7b9886f131a85ba3`
+      `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=9b084a8b56d739bf7b9886f131a85ba3`
     );
 
     const data = await weatherData.json();
