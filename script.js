@@ -1,5 +1,6 @@
 let temperatureDegree = document.querySelector(".temperature-degree");
 let locationTimezone = document.querySelector(".location-timezone");
+let time = document.querySelector(".time");
 let temperatureDesc = document.querySelector(".temperature-description");
 let weatherIcon = document.querySelector(".weather-icon");
 const form = document.querySelector("form");
@@ -11,7 +12,7 @@ function handleSubmit(e) {
   searchWeather();
 }
 
-const renderGeoWeather = function (data) {
+const renderGeoWeather = function (data, timeData) {
   // let temp = "";
   // let description = "";
   // let icon = "";
@@ -63,7 +64,7 @@ const renderGeoWeather = function (data) {
   // document.body.createElement(html);
 };
 
-const renderSearchWeather = function (data) {
+const renderSearchWeather = function (data, timeData) {
   const { temp } = data.main;
   const { description, icon } = data.weather[0];
   const { name } = data;
@@ -88,8 +89,6 @@ const getWeather = async function () {
     const position = await getPosition();
     const { latitude: lat, longitude: lng } = position.coords;
 
-    const proxy = "https://cors-anywhere.herokuapp.com/";
-
     const weatherData = await fetch(
       `http://api.openweathermap.org/data/2.5/find?lat=${lat}&lon=${lng}&cnt=1&units=metric&appid=9b084a8b56d739bf7b9886f131a85ba3`
     );
@@ -108,7 +107,7 @@ const searchWeather = async function () {
     const input = document.querySelector('input[type="text"]');
     const location = input.value;
 
-    const proxy = "https://cors-anywhere.herokuapp.com/";
+    // const timeData = await fetch(``);
 
     const weatherData = await fetch(
       `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=9b084a8b56d739bf7b9886f131a85ba3`
